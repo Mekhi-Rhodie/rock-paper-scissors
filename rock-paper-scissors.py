@@ -37,7 +37,7 @@ def start_game():
 
     while True:
 
-        player_choice = input("Please choose either Rock, Paper, or Scissors: ").strip().lower()
+        player_choice = input("Please choose either Rock, Paper, or Scissors: ").strip()
 
         if player_choice == "exit":
             print("\nFinal Score - Wins: {}, Losses: {}, Ties: {}".format(
@@ -51,14 +51,14 @@ def start_game():
             continue
 
         ai_choice = random.choice(choices)
-        print(f"🤖 AI chose: {ai_choice}")
+        print(f"🤖 AI chose: {ai_choice.capitalize()}")
 
         result = determine_winner(player_choice, ai_choice)
 
         if result == "Win":
             print("🎉 The computer wins!")
             score["Wins"] += 1
-        elif result == "lose":
+        elif result == "Lose":
             print("😢 You lose!")
             score["Losses"] += 1
         else:
