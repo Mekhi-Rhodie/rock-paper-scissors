@@ -64,3 +64,10 @@ def start_game():
         else:
             print("🤝 It's a tie!")
             score["Ties"] += 1
+
+        save_score(score)
+
+        print(f"Score -> Wins: {score['Wins']} | Losses: {score['Losses']} | Ties: {score['Ties']}\n")
+
+if __name__ == "__main__":
+    start_game()
